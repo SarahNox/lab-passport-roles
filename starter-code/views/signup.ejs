@@ -1,0 +1,19 @@
+<h1>Sign up</h1>
+<form action="/signup" method="POST" id="form-container">
+  <label for="username">Username</label>
+  <input type="text" name="username" placeholder="Your Name">
+  <br><br>
+  <label for="password">Password</label>
+  <input type="password" name="password" placeholder="Your Password">
+  <% if (typeof(message) != "undefined") { %>
+    <div class="error-message"><%= message %></div>
+  <% } %>
+  <br><br>
+  <% if (typeof(message) != "undefined") { %>
+    <div class="error-message"><%= message %></div>
+  <% } %>
+  <button>Sign up</button>
+  <p class="account-message">
+    <a href="/login">Login</a>
+  </p>
+</form>
